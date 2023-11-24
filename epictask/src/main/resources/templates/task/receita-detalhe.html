@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Detalhes da Receita</title>
+</head>
+<body>
+    <h1>Detalhes da Receita</h1>
+    
+    <div class="content">
+        <div th:if="${task != null}">
+           <h2    th:text=" 'Nome da receita: ' + ${task.title}"></h2>
+            <p th:text="${task.description}"></p>
+            <p>Pontuação: <span th:text="${task.score}"></span></p>
+            <!-- Adicione outros detalhes da receita conforme necessário -->
+
+            <!-- Botão de Voltar -->
+            <div class="actions">
+                <a href="/task" class="btn">Voltar para a Lista</a>
+            </div>
+        </div>
+        <div th:unless="${task != null}">
+            <p>A receita não foi encontrada.</p>
+            <!-- Adicione uma mensagem ou redirecione para outra página conforme necessário -->
+        </div>
+    </div>
+</body>
+</html>

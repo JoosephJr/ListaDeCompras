@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https:thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de nova Receita</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <h1>Lista de Compras</h1>
+    <span> </span>
+    <a href="/task/new" class="btn">Novo Produto</a>
+
+    <div class="content">
+        <div class="tasks">
+            <div class="card-task" th:each="task: ${tasks}">
+
+                <a th:href="@{/task/detalhe/{id}(id=${task.id})}">
+                    <h2 th:text="${task.title}"></h2>
+                </a>
+                <p th:text="${task.description}"></p>
+                
+                <div style="display: flex;">
+                    <p>R$  </p>
+                    <p th:text="${task.score}"></p>
+                </div>
+                
+                <a th:href="@{'/task/delete/' + ${task.id}}" class="btn red">Excluir</a>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
