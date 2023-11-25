@@ -1,0 +1,19 @@
+package br.senac.sp.epictask.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+
+@Configuration
+public class SecurityConfig {
+    
+    @Bean //sempre que o spring preci   sar dessa segurança vai utilizar esse método abaixo
+    public SecurityFilterChain config(HttpSecurity http) throws Exception{
+        
+        return http
+        .oauth2Login(auth -> auth.defaultSuccessUrl("/task"))
+        .build();
+    }
+}

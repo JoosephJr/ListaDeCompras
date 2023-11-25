@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de nova Receita</title>
+    <title>Lista de Compras</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <h1>Lista de Compras</h1>
-    <span> </span>
     <a href="/task/new" class="btn">Novo Produto</a>
 
     <div class="content">
@@ -27,8 +26,14 @@
                     <p>R$  </p>
                     <p th:text="${task.score}"></p>
                 </div>
+
+                <div class="actions">
+                    <form th:action="@{'/task/{id}'(id=${task.id})}" th:method="delete">
+                        <button class="btn red">Excluir</button>
+                    </form>
+                </div>
                 
-                <a th:href="@{'/task/delete/' + ${task.id}}" class="btn red">Excluir</a>
+                <!-- <a th:href="@{'/task/delete/' + ${task.id}}" class="btn red">Excluir</a> -->
 
             </div>
         </div>

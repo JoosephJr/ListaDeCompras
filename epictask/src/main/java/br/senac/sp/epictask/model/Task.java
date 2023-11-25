@@ -18,13 +18,13 @@ public class Task {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @NotBlank
+    @NotBlank(message = "O valor não pode estar em branco!")
     private String title;
 
-    @Size(min = 10, message = "Digite no mínimo 10 caracteres")
+    @Size(min = 5, message = "Digite no mínimo 5 caracteres")
     private String description;
     
-    @Min(value = 1, message = "A pontuação não pode ser negativa")
+    @Min(value = 1, message = "O valor deve ser maior ou igual a 1")
     private Integer score;
 
 

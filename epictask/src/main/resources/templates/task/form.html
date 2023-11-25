@@ -10,7 +10,7 @@
 <body>
     <h1>Incluir Produto</h1>
     <div class="content">
-        <form action="" method="post" th:object="${task}">
+        <form th:action="${'/task/new'}" method="post" th:object="${task}">
 
             <label for="titulo">Produto</label>
             <input type="text" th:field="*{title}"> 
