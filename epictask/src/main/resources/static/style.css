@@ -1,12 +1,13 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Vina+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap');
 
 :root{
-	--dark-color: #1F1F1F;
+	--dark-color: #012733;
 	--active-color: #E23221;
-	--primary-font: 'Pridi', serif;
-	--font-color:  rgba(255,255,255,0.8);
+	--primary-font:'Kanit', sans-serif;
+	--font-color:  rgba(226, 226, 226, 0.8);
 }
 
 *{
@@ -42,16 +43,16 @@ body{
 
 a{
 	text-decoration: none;
-	color:var(--font-color);
+	color:#f7f7f7;
 }
 
 a:visited{
-	color:var(--font-color);
+	color:#ffffff;
 }
 
 .yellow, a.yellow { color: #FED851 }
 .red, a.red { color: #BF0059 }
-.blue { color: #13AFE0 }
+.blue { color: #013b4d}
 
 nav {
 	max-width: 1200px;
@@ -87,6 +88,9 @@ nav li a:hover{
 .nav-user{
 	display: flex;
 	align-items: center;
+}
+.h1{
+	text-align: center;
 }
 
 .btn-sm{
@@ -211,16 +215,29 @@ textarea{
 
 button.btn{
 	font: var(--font-primary) 1rem;
-	background: transparent;
+	background: #6e6e6e;
 	border: none;
 	cursor: pointer;
+	margin-left: 7vh;
 }
 
 .btn {
-	padding: 0.5rem 1rem;
+	
+	padding: 0.5rem 1rem ;
 	border-radius: 8px;
 	box-shadow: -4px -4px 10px rgba(85, 85, 85, 0.25), 
 				4px 4px 10px rgba(0, 0, 0, 0.25);
+	color: #ffffff;
+	background-color: #6e6e6e;
+
+}
+.btn:hover {
+	
+	padding: 0.5rem 1rem;
+	border-radius: 8px;
+	box-shadow: -4px -4px 10px rgba(248, 248, 248, 0.25), 
+				4px 4px 10px rgba(165, 165, 165, 0.25);
+	background-color: #013b4d;
 }
 
 .alert{
@@ -245,11 +262,11 @@ button.btn{
 
 .card-task {
 	position: relative;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 1.5rem;
 	border-radius: 8px;
 	box-shadow: -4px -4px 10px rgba(85, 85, 85, 0.25), 
 				4px 4px 10px rgba(0, 0, 0, 0.25);
-
+	background-color: #222;
 }
 
 .card-task .avatar{

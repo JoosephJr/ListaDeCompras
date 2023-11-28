@@ -10,10 +10,11 @@
 </head>
 
 <body>
-    <h1>Lista de Compras</h1>
-    <a href="/task/new" class="btn">Novo Produto</a>
+    <h1 class="h1">Lista de Compras</h1>
+    
 
     <div class="content">
+        <a href="/task/new" class="btn">Novo Produto</a>
         <div class="tasks">
             <div class="card-task" th:each="task: ${tasks}">
 
@@ -29,7 +30,7 @@
 
                 <div class="actions">
                     <form th:action="@{'/task/{id}'(id=${task.id})}" th:method="delete">
-                        <button class="btn red">Excluir</button>
+                        <button class="btn">Excluir</button>
                     </form>
                 </div>
                 
