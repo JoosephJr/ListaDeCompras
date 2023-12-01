@@ -215,7 +215,7 @@ textarea{
 
 button.btn{
 	font: var(--font-primary) 1rem;
-	background: #6e6e6e;
+	background: #013b4d;
 	border: none;
 	cursor: pointer;
 	margin-left: 7vh;
@@ -228,16 +228,15 @@ button.btn{
 	box-shadow: -4px -4px 10px rgba(85, 85, 85, 0.25), 
 				4px 4px 10px rgba(0, 0, 0, 0.25);
 	color: #ffffff;
-	background-color: #6e6e6e;
+	background-color: #013b4d;
 
 }
 .btn:hover {
-	
 	padding: 0.5rem 1rem;
 	border-radius: 8px;
 	box-shadow: -4px -4px 10px rgba(248, 248, 248, 0.25), 
 				4px 4px 10px rgba(165, 165, 165, 0.25);
-	background-color: #013b4d;
+	background-color: #012733;
 }
 
 .alert{

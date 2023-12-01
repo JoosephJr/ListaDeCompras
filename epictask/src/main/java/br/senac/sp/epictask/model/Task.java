@@ -18,7 +18,7 @@ public class Task {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @NotBlank(message = "O valor não pode estar em branco!")
+    @NotBlank(message = "O nome do produto não pode estar em branco")
     private String title;
 
     @Size(min = 5, message = "Digite no mínimo 5 caracteres")
